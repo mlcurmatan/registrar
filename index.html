@@ -1,0 +1,234 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    Personal Information
+                </legend>
+                <label for="FirstName">Name</label>
+                <input type="text" id="FirstName" placeholder="First Name">
+                <input type="text" id="MiddleName" placeholder="Middle Name">
+                <input type="text" id="LastName" placeholder="Last Name">
+                <input type="text" id="Suffix" placeholder="Suffix">
+                <br>
+                <label for="Birthday">Birthday</label>
+                <input type="date" id="Birthday" onkeydown="return false">
+                <br>
+                <label for="Gender">Gender </label>
+                <select id="Gender" name="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Non-Binary">Non-Binary</option>
+                </select> 
+                <br>
+                <label for="Nationality">Nationality</label>
+                <select id="Nationality" name="Nationality">
+                    <option value="Filipino">Filipino</option>
+                    <option value="American">American</option>
+                    <option value="Chinese">Chinese</option>
+                </select> 
+                <br>
+                <label for="Religion">Religion</label>
+                <input type="text" id="Religion" placeholder="Religion">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Contact Details
+                </legend>
+                <label for="Email">Email Address</label>
+                <input type="email" id="Email" placeholder="Email Address">
+                <br>
+                <label for="Mobile">Mobile Number</label>
+                <input type="tel" id="Mobile" placeholder="Mobile Number">
+                <br>
+                <label for="Line">Landline</label>
+                <input type="tel" id="Line" placeholder="Landline">
+                <br>
+                <label>Complete home address</label>
+                <br>
+                <label for="Street">Street</label><br>
+                <input type="text" id="Street" placeholder="Street">
+                <br>
+                <label for="Barangay">Barangay</label><br>
+                <input type="text" id="Barangay" placeholder="Barangay">
+                <br>
+                <label for="City">City</label><br>
+                <input type="text" id="City" placeholder="City">
+                <br>
+                <label for="Province">Province</label><br>
+                <input type="text" id="Province" placeholder="Province">
+                <br>
+                <label for="ZIP">Zip Code</label><br>
+                <input type="text" id="ZIP" placeholder="Zip Code">
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Academic History
+                </legend>
+                <label for="GSchool">Grade School Name</label>
+                <input type="text" id="GSchool" placeholder="Grade School Name">
+                <br>
+                <label for="YearGraduated1">Year Graduated</label>
+                <input type="text" id="YearGraduated1" placeholder="Year Graduated">
+                <br>
+                <label for="GSchoolA">Grade School Address</label>
+                <input type="text" id="GSchoolA" placeholder="Grade School Address">
+                <br>
+                <label for="JSchool">Junior High School Name</label>
+                <input type="text" id="JSchool" placeholder="Junior High School Name">
+                <br>
+                <label for="YearGraduated2">Year Graduated</label>
+                <input type="text" id="YearGraduated2" placeholder="Year Graduated">
+                <br>
+                <label for="JSchoolA">Junior High School Address</label>
+                <input type="text" id="JSchoolA" placeholder="Junior High School Address">
+                <br>
+                <label for="SSchool">Senior High School Name</label>
+                <input type="text" id="SSchool" placeholder="Senior High School Name">
+                <br>
+                <label for="YearGraduated3">Year Graduated</label>
+                <input type="text" id="YearGraduated3" placeholder="Year Graduated">
+                <br>
+                <label for="SSchoolAvg">Grade Average</label>
+                <input type="text" id="SSchoolAvg" placeholder="Grade Average">
+                <br>
+                <label for="SSchoolA">Senior High School Address</label>
+                <input type="text" id="SSchoolA" placeholder="Senior High School Address">
+                <br>
+            </fieldset>
+<fieldset>
+    <legend>Education Level</legend>
+    <div class="form-group">
+        <input type="radio" id="ug" name="level" onchange="toggleSections()"> Undergraduate
+        <br>
+        <input type="radio" id="grad" name="level" onchange="toggleSections()"> Graduate
+    </div>
+
+    <div id="ug_section" class="hidden">
+        <label>Department: </label>
+        <select id="ug_courses" onchange="toggleSections()">
+            <option value="">-- Select Department --</option>
+            <option value="CEA">College of Engineering and Architecture</option>
+            <option value="CCS">College of Computer Studies</option>
+            <option value="CBE">College of Business Education</option>
+            <option value="COA">College of Arts</option>
+        </select>
+    </div>
+
+    <div id="cea_sub_section" class="hidden">
+        <label>Programs: </label>
+        <select>
+            <option value="rrr">BS Architecture</option>
+            <option value="sss">BS Chemical Engineering</option>
+            <option value="ttt">BS Civil Engineering</option>
+            <option value="uuu">BS Computer Engineering</option>
+            <option value="vvv">BS Electrical Engineering</option>
+            <option value="www">BS Electronics Engineering</option>
+            <option value="xxx">BS Industrial Engineering</option>
+            <option value="yyy">BS Mechanical Engineering</option>
+        </select>
+    </div>
+
+    <div id="CCS_sub_section" class="hidden">
+        <label>Programs: </label>
+        <select>
+            <option value="aaa">BS Computer Science</option>
+            <option value="bbb">BS Data Science and Analytics</option> 
+            <option value="ccc">BS Entertainment and Multimedia Computing</option>
+            <option value="ddd">BS Information Technology</option>
+        </select>
+    </div>
+
+    <div id="CBE_sub_section" class="hidden">
+        <label>Programs: </label>
+        <select id="cbe_programs_select" onchange="toggleSections()">
+            <option value="">-- Select Program --</option>
+            <option value="eee">BS Accountancy</option>
+            <option value="fff">BS Accounting Information System</option>
+            <option value="ggg">BS Business Administration</option>
+        </select>
+    </div>
+
+    <div id="CBE_subs_section" class="hidden">
+        <label>Specialization: </label>
+        <select>
+            <option value="fm">Financial Management</option>
+            <option value="hrm">Human Resource Management</option>
+            <option value="lscm">Logistics and Supply Chain Management</option>
+            <option value="mm">Marketing Management</option>
+        </select>
+    </div>
+
+    <div id="COA_sub_section" class="hidden">
+        <label>Programs: </label>
+        <select>
+            <option value="hhh">Bachelor of Arts in English Language</option>
+            <option value="iii">Bachelor of Arts in Political Science</option>
+        </select>
+    </div>
+
+    <div id="grad_section" class="hidden">
+        <label>Degree Type: </label>
+        <select id="grad_type" onchange="toggleSections()">
+            <option value="">-- Select Degree Type --</option>
+            <option value="doc">Doctorate Degrees</option>
+            <option value="mas">Master's Degrees</option>
+        </select>
+    </div>
+
+    <div id="doctorate_options" class="hidden">
+        <label>Doctorate Programs: </label>
+        <select>
+            <option>Doctor in Information Technology</option>
+            <option>Doctor of Engineering with Specialization in Computer Engineering</option>
+            <option>Doctor of Philosophy in Computer Science</option>
+        </select>
+    </div>
+
+    <div id="masters_options" class="hidden">
+        <label>Master's Programs: </label>
+        <select>
+            <option>Master in Information Systems</option>
+            <option>Master in Information Technology</option>
+            <option>Master in Logistics and Supply Chain Management</option>
+            <option>Master of Engineering with Specialization in Civil Engineering</option>
+            <option>Master of Engineering with Specialization in Computer Engineering</option>
+            <option>Master of Engineering with Specialization in Electrical Engineering</option>
+            <option>Master of Engineering with Specialization in Electronics Engineering</option>
+            <option>Master of Engineering with Specialization in Industrial Engineering</option>
+            <option>Master of Engineering with Specialization in Mechanical Engineering</option>
+            <option>Master of Science in Computer Science</option>
+        </select>
+    </div>
+</fieldset>
+
+<script>
+function toggleSections() {
+    const isUG = document.getElementById('ug').checked;
+    const isGrad = document.getElementById('grad').checked;
+    
+    const ugDept = document.getElementById('ug_courses').value;
+    const cbeProg = document.getElementById('cbe_programs_select').value;
+    const gradType = document.getElementById('grad_type').value;
+
+    // Root Toggles
+    document.getElementById('ug_section').style.display = isUG ? 'block' : 'none';
+    document.getElementById('grad_section').style.display = isGrad ? 'block' : 'none';
+
+    // Undergraduate Sub-sections
+    document.getElementById('cea_sub_section').style.display = (isUG && ugDept === 'CEA') ? 'block' : 'none';
+    document.getElementById('CCS_sub_section').style.display = (isUG && ugDept === 'CCS') ? 'block' : 'none';
+    document.getElementById('CBE_sub_section').style.display = (isUG && ugDept === 'CBE') ? 'block' : 'none';
+    document.getElementById('COA_sub_section').style.display = (isUG && ugDept === 'COA') ? 'block' : 'none';
+
+    // Business Admin Specialization
+    document.getElementById('CBE_subs_section').style.display = (isUG && ugDept === 'CBE' && cbeProg === 'ggg') ? 'block' : 'none';
+
+    // Graduate Sub-sections
+    document.getElementById('doctorate_options').style.display = (isGrad && gradType === 'doc') ? 'block' : 'none';
+    document.getElementById('masters_options').style.display = (isGrad && gradType === 'mas') ? 'block' : 'none';
+}
+</script>
