@@ -1,36 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>
-    </title>
-        <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Enrollment Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <form>
         <fieldset>
             <legend>Personal Information</legend>
             <label for="FirstName">Name</label>
-            <input type="text" id="FirstName" placeholder="First Name">
-            <input type="text" id="MiddleName" placeholder="Middle Name">
-            <input type="text" id="LastName" placeholder="Last Name">
-            <input type="text" id="Suffix" placeholder="Suffix">
-            <br>
+            <div class="input-row">
+                <input type="text" id="FirstName" placeholder="First Name">
+                <input type="text" id="MiddleName" placeholder="Middle Name">
+                <input type="text" id="LastName" placeholder="Last Name">
+                <input type="text" id="Suffix" placeholder="Suffix">
+            </div>
+            
             <label for="Birthday">Birthday</label>
             <input type="date" id="Birthday" onkeydown="return false">
-            <br>
+            
             <label for="Gender">Gender</label>
             <select id="Gender" name="Gender">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Non-Binary">Non-Binary</option>
             </select>
-            <br>
+            
             <label for="Nationality">Nationality</label>
             <select id="Nationality" name="Nationality">
                 <option value="Filipino">Filipino</option>
                 <option value="American">American</option>
                 <option value="Chinese">Chinese</option>
             </select>
-            <br>
+            
             <label for="Religion">Religion</label>
             <input type="text" id="Religion" placeholder="Religion">
         </fieldset>
@@ -39,13 +44,13 @@
             <legend>Contact Details</legend>
             <label for="Email">Email Address</label>
             <input type="email" id="Email" placeholder="Email Address">
-            <br>
+            
             <label for="Mobile">Mobile Number</label>
             <input type="tel" id="Mobile" placeholder="Mobile Number">
-            <br>
+            
             <label for="Line">Landline</label>
             <input type="tel" id="Line" placeholder="Landline">
-            <br>
+            
             <label>Complete home address</label>
             <input type="text" id="Street" placeholder="Street">
             <input type="text" id="Barangay" placeholder="Barangay">
@@ -60,12 +65,12 @@
             <input type="text" id="GSchool" placeholder="Grade School Name">
             <input type="text" id="YearGraduated1" placeholder="Year Graduated">
             <input type="text" id="GSchoolA" placeholder="Grade School Address">
-            <br>
+            
             <label for="JSchool">Junior High School</label>
             <input type="text" id="JSchool" placeholder="Junior High School Name">
             <input type="text" id="YearGraduated2" placeholder="Year Graduated">
             <input type="text" id="JSchoolA" placeholder="Junior High School Address">
-            <br>
+            
             <label for="SSchool">Senior High School</label>
             <input type="text" id="SSchool" placeholder="Senior High School Name">
             <input type="text" id="YearGraduated3" placeholder="Year Graduated">
@@ -75,10 +80,13 @@
 
         <fieldset>
             <legend>Education Level</legend>
-            <div class="form-group">
-                <input type="radio" id="ug" name="level" onchange="toggleSections()"> Undergraduate
-                <br>
-                <input type="radio" id="grad" name="level" onchange="toggleSections()"> Graduate
+            <div class="form-group radio-group">
+                <label class="radio-label">
+                    <input type="radio" id="ug" name="level" onchange="toggleSections()"> Undergraduate
+                </label>
+                <label class="radio-label">
+                    <input type="radio" id="grad" name="level" onchange="toggleSections()"> Graduate
+                </label>
             </div>
 
             <div id="ug_section" class="hidden">
