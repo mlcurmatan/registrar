@@ -72,6 +72,19 @@ select {
     display: none;
     background-color: #fafafa;
     padding: 10px;
-    border-left: 3px solid #007bff;
+    border-left: 3px solid #828486;
     margin-top: 5px;
+}
+
+#submitBtn {
+    padding: 10px 20px;
+    background-color: #828486;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    background-color: #555657;
 }

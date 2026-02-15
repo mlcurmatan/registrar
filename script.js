@@ -31,3 +31,10 @@ function toggleSections() {
     setDisplay('doctorate_options', isGrad && gradType === 'doc');
     setDisplay('masters_options', isGrad && gradType === 'mas');
 }
+document.querySelector('form').addEventListener('submit', function(event) {
+    // Stops the page from refreshing
+    event.preventDefault(); 
+    
+    // Shows the prompt/alert
+    alert("Form submitted successfully!");
+});
